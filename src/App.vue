@@ -28,11 +28,11 @@ export default {
   components: {
     Listing,
     Pagenation,
-    Loading
+    Loading,
   },
   mounted() {
     const BASEURL = 'api/advertisements';
-    this.$http.get(BASEURL, {}).then(response => {
+    this.$http.get(BASEURL, {}).then((response) => {
       this.advertisementData = response.data.data;
       this.isLoading = false;
     });
@@ -41,7 +41,7 @@ export default {
     return {
       advertisementData: '',
       pageNumber: 0,
-      isLoading: true
+      isLoading: true,
     };
   },
   computed: {
@@ -49,13 +49,13 @@ export default {
       const startItem = this.pageNumber * 6;
       const endItem = (this.pageNumber + 1) * 6;
       return this.advertisementData.slice(startItem, endItem);
-    }
+    },
   },
   methods: {
     updatePage(value) {
       this.pageNumber = value;
       window.scrollTo(0, 0);
-    }
-  }
+    },
+  },
 };
 </script>
