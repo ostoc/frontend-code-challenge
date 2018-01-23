@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     const BASEURL = 'api/advertisements';
-    this.$http.get(BASEURL, {}).then(response => {
+    this.$http.get(BASEURL, {}).then((response) => {
       this.advertisementData = response.data.data;
     });
   },
@@ -36,14 +36,15 @@ export default {
   },
   computed: {
     pagedData() {
-      let startItem = this.pageNumber * 6;
-      let endItem = (this.pageNumber + 1) * 6;
+      const startItem = this.pageNumber * 6;
+      const endItem = (this.pageNumber + 1) * 6;
       return this.advertisementData.slice(startItem, endItem);
     },
   },
   methods: {
     updatePage(value) {
       this.pageNumber = value;
+      window.scrollTo(0, 0);
     },
   },
 };

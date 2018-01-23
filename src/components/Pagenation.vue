@@ -6,10 +6,10 @@
 </template>
 <script>
 export default {
-  name: "Pagenation",
+  name: 'Pagenation',
   data() {
     return {
-      currentPage: 0
+      currentPage: 0,
     };
   },
   computed: {
@@ -19,16 +19,16 @@ export default {
   },
   methods: {
     nextPage() {
-      this.currentPage++;
-      this.$emit("pageClicked", this.currentPage);
+      this.currentPage += 1;
+      this.$emit('pageClicked', this.currentPage);
     },
     prePage() {
       if (this.currentPage !== 0) {
-        this.currentPage--;
-        this.$emit("pageClicked", this.currentPage);
+        this.currentPage -= 1;
+        this.$emit('pageClicked', this.currentPage);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -45,9 +45,16 @@ button {
   margin: 0 1.2rem;
   background: #fff;
   border: 1px solid #dbdbdb;
+  cursor: pointer;
+  &:hover {
+    background: #f2f2f2;
+  }
   &.disable {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed;
+    &:hover {
+      background: transparent;
+    }
   }
 }
 </style>
