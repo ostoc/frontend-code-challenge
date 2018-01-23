@@ -1,49 +1,22 @@
 # Front-End Interview Test
 
-This is a simple front-end code challenge created to serve two purposes:
+## Testing Procedure
 
-1. Show off your skills,
-1. Give us a better understanding of your skills.
+```
+$ git clone git@github.com:ostoc/frontend-code-challenge.git
 
-## The Task
+$ yarn install
 
-The programming challenge exists in 2 parts:
-* Part A: HTML + CSS
-* Part B: Javascript
+$ yarn run dev
 
-### PART A: HTML + CSS
+```
 
-![Screen](https://raw.githubusercontent.com/mcmakler/frontend-code-challenge/master/assets/fe_test_example_screen.png)
+## Important Notice
 
-* Create a layout based on the given screen (fe_test_example_screen.png).
-* Style the layout consistently and beautifully, adhering as closely to the design as possible.
-* **NOTE:** You are free to use any preprocessor you wish, or write raw CSS. *Bonus points for an explanation of your choice.*
+1. Only `yarn run dev` can provide expected results, due to the `CROS` limitation. Webpack is used
+as a proxy to get the API call.
+2. First loading time is quite long casue there is no API documentation for API, wait few seconds.
 
-### PART B: Javascript
+## Framework of choice
 
-* Consume our public API @ https://api.mcmakler.de/v1/advertisements to retrieve a list of advertisements of vacant apartments.
-* Display the first 10 advertisements in the HTML + CSS layout created in step A, sticking to the layout, placing data where it fits.
-* **NOTE:** You are free to use any framework you wish, or do it VanillaJS style. *Brief explanation of your choice.*
-
-## Additional Instructions
-
-* Fork this repository
-* After you're done, provide us the link to your repository.
-* Leave comments where you were not sure how to properly proceed.
-* Implementations without a README will be automatically rejected.
-* No pull requests
-* ES6 and above
-
-## Bonus Points
-
-* Tests
-* Clean code!
-* Knowledge of application flow.
-* Knowledge of modern best practices/coding patterns.
-* Demonstration of good state management.
-* Usage of frameworks/supersets.
-* Pixel perfection.
-* Componential thinking.
-* Usage of linters.
-* Git hooks.
-* Usage of Material Design concepts
+VueJS. Easy to use and allow for fast prototyping. 
