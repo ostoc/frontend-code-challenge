@@ -2,13 +2,11 @@
 
 ## Testing Procedure
 
-```
+```bash
 $ git clone git@github.com:ostoc/frontend-code-challenge.git
-
+$ cd frontend-code-challenge
 $ yarn install
-
 $ yarn run dev
-
 ```
 
 ## Important Notice
